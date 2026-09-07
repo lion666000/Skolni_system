@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b42dd7f4-5482-4c98-a4e8-2a7c73e19dee" name="Changes" comment="Student třída" />
+    <list default="true" id="b42dd7f4-5482-4c98-a4e8-2a7c73e19dee" name="Changes" comment="SS" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -82,7 +82,23 @@
       <option name="project" value="LOCAL" />
       <updated>1788769886949</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="haf">
+      <option name="closed" value="true" />
+      <created>1788770700955</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1788770700955</updated>
+    </task>
+    <task id="LOCAL-00003" summary="SS">
+      <option name="closed" value="true" />
+      <created>1788770992086</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1788770992086</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -90,6 +106,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Student třída" />
-    <option name="LAST_COMMIT_MESSAGE" value="Student třída" />
+    <MESSAGE value="haf" />
+    <MESSAGE value="SS" />
+    <option name="LAST_COMMIT_MESSAGE" value="SS" />
   </component>
 </project>

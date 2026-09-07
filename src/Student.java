@@ -1,26 +1,59 @@
 public class Student {
     private String jmeno;
     private int rocnik;
-    private Double prumer;
+    private double prumer;
 
 
-
-    Student(String jmeno, int rocnik, Double prumer) {
+    public Student(String jmeno, int rocnik, double prumer) {
         this.jmeno = jmeno;
-        if ((rocnik>=1)&&(rocnik<=4)){
-            this.rocnik = rocnik;
-        }
-        else{
-            System.err.println("Špatný formát ročníku!");
-        }
+        this.rocnik = rocnik;
+        this.prumer = prumer;
+    }
 
-        if ((prumer>=1.0)&&(prumer<=5.0)){
-            this.prumer = prumer;
-        }
-        else{
-            System.err.println("Špatný formát průměru!");
+
+
+    public String toString(){
+        return jmeno + "ročník " + rocnik + ", průměr " +prumer;
+    }
+
+    public boolean equals(Student jedna, Student dva) {
+        if(jedna.jmeno.equals(dva.jmeno) && jedna.prumer==dva.prumer){
+            return true;
+        }else{
+            return false;
         }
     }
+
+
+    public void zlepsiPrmer(double oKolik){
+        if((prumer-oKolik)>=1){
+            prumer=prumer-oKolik;
+        }else{
+            System.err.println("ZADANÁ ŠPATNÁ HODNOTA");
+        }
+    }
+
+    public void klasifikace(){
+        if(prumer<2){
+            System.out.println("VÝBORNÝ");
+        }
+        if(prumer>=2 && prumer<3){
+            System.out.println("CHVALITEBNÝ");
+        }
+        if(prumer>=3 && prumer<4){
+            System.out.println("DOBRÝ");
+        }
+        if(prumer>=4 && prumer<5){
+            System.out.println("DOSTATEČNÝ");
+        }
+        if(prumer>=5){
+            System.out.println("NEDOSTATEČNÝ");
+        }
+    }
+
+
+
+
 
     public String getJmeno() {
         return jmeno;
@@ -35,51 +68,25 @@ public class Student {
     }
 
     public void setRocnik(int rocnik) {
-        this.rocnik = rocnik;
+        if (rocnik==1 || rocnik==2 || rocnik==3 || rocnik==4) {
+            this.rocnik = rocnik;
+        }else{
+            System.err.println("CHYBNÁ HODNOTA ROČNÍKU");
+        }
     }
 
-    public Double getPrumer() {
+    public double getPrumer() {
         return prumer;
+
+
     }
 
-    public void setPrumer(Double prumer) {
-        this.prumer = prumer;
-    }
+    public void setPrumer(double prumer) {
+        if(prumer>=1 && prumer<=5){
+            this.prumer = prumer;
+        }else{
+            System.err.println("CHYBNÁ HODNOTA PRŮMĚRU");
+        }
 
-    public String toString(){
-        return jmeno+" (Ročník: "+rocnik+", průměr: "+prumer + ")";
-    }
-
-    public boolean equals(Student druhyObjekt){
-        if((jmeno.equals(druhyObjekt.jmeno))&&(prumer.equals(druhyObjekt.prumer))){
-            return true;
-        }
-        else{
-            return false;
-        }
-    }
-
-    public void zlepsiPrumer(double oKolik){
-        if ((prumer -= oKolik)<=1.0){
-            prumer = 1.0;
-        }
-        else{
-            prumer -= oKolik;
-        }
-    }
-    public void klasifikace(){
-        System.out.print(jmeno + " Klasifikace: ");
-        if ((prumer>=1.0)&&(prumer<=1.5)){
-            System.out.println("Výborný");
-        } else if ((prumer>=1.5)&&(prumer<=2.5)) {
-            System.out.println("Chvalitebný");
-        } else if ((prumer>=2.5)&&(prumer<=3.5)) {
-            System.out.println("Dobrý");
-        } else if ((prumer>=3.5)&&(prumer<=4.5)) {
-            System.out.println("Dostatečný");
-        }
-        else{
-            System.out.println("Nedostatečný");
-        }
     }
 }

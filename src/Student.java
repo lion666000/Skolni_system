@@ -69,7 +69,6 @@ public class Student {
         }
     }
     public void klasifikace(){
-        System.out.print(jmeno + " Klasifikace: ");
         if ((prumer>=1.0)&&(prumer<=1.5)){
             System.out.println("Výborný");
         } else if ((prumer>=1.5)&&(prumer<=2.5)) {
@@ -82,5 +81,10 @@ public class Student {
         else{
             System.out.println("Nedostatečný");
         }
+    }
+
+    public void popis(){
+        System.out.print("Student: " + jmeno+" (ročník " + rocnik + ", průměr " + prumer + "), klasifikace: ");
+        klasifikace();
     }
 }

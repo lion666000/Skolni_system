@@ -5,7 +5,7 @@ public class Student {
 
     public Student(String jmeno, int rocnik, double prumer) {
         this.jmeno = jmeno;
-        if (rocnik > 0 && prumer < 5){
+        if (rocnik > 0 && rocnik < 5){
             this.rocnik = rocnik;
         }
         if (prumer >= 1.0 && prumer <= 5.0 ){

@@ -1,5 +1,19 @@
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+        Student student = new Student("Joj", 2, 1.0);
+        Student student2 = new Student("Jane", 3, 5.0);
+        Student student3 = new Student("Joj", 4, 1.0);
+
+
+        System.out.println(student.equals(student3));
+
+        System.out.println(student2.toString());
+
+        student2.zlepsiPrumer(2.0);
+
+        System.out.println(student2.toString());
+
+        System.out.println(student3.toString());
+        student3.klasifikace();
     }
 }

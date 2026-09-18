@@ -10,6 +10,9 @@ public class Main {
         System.out.println("1 - přidat studenta");
         System.out.println("2 - vypsat studenty");
         System.out.println("3 - hledat podle jména");
+        System.out.println("4 - přidat učitele");
+        System.out.println("5 - vypsat všechny");
+
         int vyber = sc.nextInt();
         sc.nextLine();
 
@@ -23,7 +26,7 @@ public class Main {
                     System.out.println("zadej prumer");
                     double prumer = sc.nextDouble();
                     sc.nextLine();
-                    ss.pridatStudenta(new Student(jmeno, rocnik, prumer));
+                    ss.pridatOsobu(new Student(jmeno, rocnik, prumer));
                 break;
 
             case 2:
@@ -33,6 +36,20 @@ public class Main {
             case 3:
                 System.out.println("zadej jméno");
                 ss.najitDleJmena(sc.nextLine());
+                break;
+
+            case 4:
+                System.out.println("zadej jméno");
+                String name = sc.nextLine();
+                System.out.println("zadej predmet");
+                String predmet = sc.nextLine();
+                sc.nextLine();
+
+                ss.pridatOsobu(new Ucitel(name, predmet));
+                break;
+
+            case 5:
+                ss.vypsatOsoby();
                 break;
         }
     }

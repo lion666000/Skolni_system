@@ -1,4 +1,4 @@
-public class Student {
+public class Student extends Osoba implements IVypysovatelny {
     private String jmeno;
     private int rocnik;
     private Double prumer;
@@ -6,6 +6,7 @@ public class Student {
 
 
     Student(String jmeno, int rocnik, Double prumer) {
+        super(jmeno);
         this.jmeno = jmeno;
         if ((rocnik>=1)&&(rocnik<=4)){
             this.rocnik = rocnik;
@@ -83,8 +84,13 @@ public class Student {
         }
     }
 
+    @Override
     public void popis(){
         System.out.print("Student: " + jmeno+" (ročník " + rocnik + ", průměr " + prumer + "), klasifikace: ");
         klasifikace();
+    }
+
+    public void radekVypisu(){
+        System.out.println(jmeno + "      | " +  rocnik + ". ročník | průměr: " + prumer);
     }
 }

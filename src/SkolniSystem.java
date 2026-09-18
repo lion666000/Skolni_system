@@ -1,22 +1,31 @@
+import javax.management.ObjectInstance;
 import java.util.ArrayList;
 
 public class SkolniSystem {
-    ArrayList<Student> students = new ArrayList<>();
+    ArrayList<Osoba> osoby = new ArrayList<>();
 
-    public void pridatStudenta(Student student){
-        students.add(student);
+    public void pridatOsobu(Osoba osoba){
+        osoby.add(osoba);
     }
 
     public void vypsatStudenty(){
-        for(Student student : students){
-            System.out.println(student);
+        for(Osoba osoba : osoby){
+            if (osoba instanceof Student){
+                ((IVypysovatelny) osoba).radekVypisu();
+            }
+        }
+    }
+
+    public void vypsatOsoby(){
+        for(Osoba osoba : osoby){
+            ((IVypysovatelny) osoba).radekVypisu();
         }
     }
 
     public void najitDleJmena(String jmeno){
-        for(Student student : students){
-            if(student.getJmeno().equals(jmeno)){
-                System.out.println(student);
+        for(Osoba osoba : osoby){
+            if(osoba.name.equals(jmeno)){
+                ((IVypysovatelny) osoba).radekVypisu();
             }
         }
     }
